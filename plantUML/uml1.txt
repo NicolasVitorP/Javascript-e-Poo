@@ -1,0 +1,6 @@
+@startuml
+class Pessoa {
+ nome : String
+ email : String
+}
+@enduml

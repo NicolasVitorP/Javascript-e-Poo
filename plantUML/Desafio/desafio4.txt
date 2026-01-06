@@ -1,0 +1,50 @@
+@startuml
+skinparam classAttributeIconSize 0
+class Cliente {
+ -nome : String
+ -email : String
+ + setNome(String nome) : boolean
+ + getNome() : String
+ + setEmail(String email) : boolean
+ + getEmail() : String
+}
+class Produto {
+ -nome : String
+ -preco : Number
+ + setNome(String nome) : boolean
+ + getNome() : String
+ + setPreco(Number preco) : boolean
+ + getPreco() : Number
+}
+class ProdutoFisico{
+ - peso : Number
+ + setPeso(Number peso) : boolean
+ + getPeso() : Number
+}
+class ProdutoDigital{
+ - tamanho : Number
+ + setTamanho(Number tamanho) : boolean
+ + getTamanho() : Number   
+}
+Produto <|-- ProdutoFisico
+Produto <|-- ProdutoDigital
+
+class Pedido{
+  - data : Date
+  + setData(Date data) : boolean 
+  + getData() : Date
+  + setPagamento(Pagamento pagamento) : boolean
+  + getPagamento() : Pagamento
+}
+class Pagamento{
+  - forma : String
+  - status : String
+  + setForma(String forma) : boolean
+  + getForma() : String
+  + setStatus(String status) : boolean
+  + getStatus() : String
+  + setPedido(Pedido pedido) : boolean
+  + getPedido() : Pedido
+}
+Pedido "1" -- "1" Pagamento
+@enduml

@@ -1,0 +1,67 @@
+@startuml
+skinparam classAttributeIconSize 0
+class Pessoa {
+ - nome : String
+ - email : String
+ + setNome(String nome) : boolean
+ + getNome() : String
+ + setEmail(String email) : boolean
+ + getEmail() : String
+ + setConta(Conta conta) : boolean
+ + getConta() : Conta
+ + setEndereco(Endereco end) : boolean
+ + getEndereco() : Endereco
+ + addTelefone(Telefone fone) : boolean
+ + getListTelefones() : Telefones[]
+}
+class PF {
+ - cpf : String
+ + setCpf(String cpf) : boolean
+ + getCpf() : String
+}
+class PJ {
+ - cnpj : String
+ + setCNPJ(String cnpj) : boolean
+ + getCNPJ() : String
+}
+
+Pessoa <|-- PF
+Pessoa <|-- PJ
+
+class Conta{
+    - user : String
+    - password : String
+    + setUser(String user) : boolean
+    + getUser() : String
+    + setPassword(String password) : boolean
+    + login(String user, String password) : boolean
+    + setPessoa(Pessoa pessoa) : boolean
+    + getPessoa() : Pessoa 
+}
+
+Pessoa "1" -- "1" Conta
+
+class Endereco {
+ - logradouro : String
+ - cep : String
++ setLogradouro(String logradouro) : boolean
+ + getLogradouro() : String
+ + setCep(String cep) : boolean
+ + getCep() : String
+ + addPessoa(Pessoa pessoa) : boolean
+ + getPessoas() : Pessoa[]
+}
+class Telefone {
+ - ddd : String
+ - numero : String
++ setDdd(String ddd) : boolean
+ + getDdd() : String
+ + setNumero(String numero) : boolean
+ + getNumero() : String
+ + addPessoa(Pessoa pessoa) : boolean
+ + getPessoas() : Pessoa[]
+}
+
+Pessoa "1..*" -- "1" Endereco
+Pessoa "1..*" -- "0..3" Telefone
+@enduml

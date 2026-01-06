@@ -1,0 +1,11 @@
+@startuml
+skinparam classAttributeIconSize 0
+class Pessoa {
+ - nome : String
+ - email : String
+ + setNome(String nome) : boolean
+ + getNome() : String
+ + setEmail(String email) : boolean
+ + getEmail() : String
+}
+@enduml

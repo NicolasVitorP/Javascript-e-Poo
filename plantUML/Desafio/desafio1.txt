@@ -1,0 +1,10 @@
+@startuml
+class Cliente {
+ nome : String
+ email : String
+}
+class Produto {
+ nome : String
+ preco : Number
+}
+@enduml
