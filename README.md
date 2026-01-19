@@ -2,6 +2,11 @@
 
 # 🏛️ Sistema de Gestão Profissional — Objetos em JavaScript
 
+<div align="center">
+  <img width="150" alt="Javascript" src="https://github.com/user-attachments/assets/a38c53aa-1175-4bbf-9e60-27437c18e040" />
+  <h1>JavaScript</h1>
+</div>
+
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![NodeJS](https://img.shields.io/badge/Node.js-20.x-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![Arquitetura](https://img.shields.io/badge/Arquitetura-DAO-orange?style=for-the-badge)
@@ -153,5 +158,6 @@ Neste projeto definitivo, a teoria foi transformada em soluções reais para pro
 * ✅ **Visão de Mercado**: Desenvolvimento focado em criar um código que outros programadores consigam ler e manter.
 
 Este projeto representa a transição do aprendizado teórico para a entrega de um sistema funcional, conectando as melhores práticas de desenvolvimento à construção de aplicações web modernas.
+
 
 
